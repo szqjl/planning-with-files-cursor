@@ -119,26 +119,27 @@ python install/verify.py
 
 ## 📦 Git 仓库
 
-本项目已初始化 Git 仓库，准备推送到 Gitee。
+本项目已推送到 Gitee：
 
-### 推送到 Gitee
+**仓库地址**: [https://gitee.com/philsz/planning-with-files-cursor](https://gitee.com/philsz/planning-with-files-cursor)
 
-1. **在 Gitee 创建仓库**
-   - 仓库名称: `planning-with-files-cursor`
-   - 仓库类型: 公开或私有
-   - **不要**初始化仓库（我们已经有了本地仓库）
+### 克隆项目
 
-2. **添加远程仓库并推送**
-   ```bash
-   git remote add origin https://gitee.com/你的用户名/planning-with-files-cursor.git
-   git push -u origin master
-   ```
+```bash
+git clone https://gitee.com/philsz/planning-with-files-cursor.git
+```
 
-详细步骤请参考 [GITEE_SETUP.md](./GITEE_SETUP.md)
+### 后续更新
+
+```bash
+git add .
+git commit -m "更新说明"
+git push
+```
 
 ---
 
 **创建时间**: 2026-01-07  
 **项目位置**: D:\CursorPlan\planning-with-files-cursor\  
-**Git 状态**: ✅ 已初始化，待推送到 Gitee
+**Git 仓库**: [https://gitee.com/philsz/planning-with-files-cursor](https://gitee.com/philsz/planning-with-files-cursor) ✅
 
