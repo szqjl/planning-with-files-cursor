@@ -117,8 +117,28 @@ python install/verify.py
 3. ⏳ 创建快速开始指南
 4. ⏳ 测试完整工作流
 
+## 📦 Git 仓库
+
+本项目已初始化 Git 仓库，准备推送到 Gitee。
+
+### 推送到 Gitee
+
+1. **在 Gitee 创建仓库**
+   - 仓库名称: `planning-with-files-cursor`
+   - 仓库类型: 公开或私有
+   - **不要**初始化仓库（我们已经有了本地仓库）
+
+2. **添加远程仓库并推送**
+   ```bash
+   git remote add origin https://gitee.com/你的用户名/planning-with-files-cursor.git
+   git push -u origin master
+   ```
+
+详细步骤请参考 [GITEE_SETUP.md](./GITEE_SETUP.md)
+
 ---
 
 **创建时间**: 2026-01-07  
-**项目位置**: D:\CursorPlan\planning-with-files-cursor\
+**项目位置**: D:\CursorPlan\planning-with-files-cursor\  
+**Git 状态**: ✅ 已初始化，待推送到 Gitee
 
