@@ -93,6 +93,19 @@
 
 _待记录遇到的问题和解决方案_
 
+## 📦 Git 仓库管理
+
+### 2026-01-07 Git 初始化
+- ✅ 创建 `.gitignore` 文件
+- ✅ 初始化 Git 仓库
+- ✅ 创建初始提交
+- ⏳ 准备推送到 Gitee 仓库
+
+### Gitee 仓库准备
+- 仓库名称建议: `planning-with-files-cursor`
+- 仓库描述: "将 Manus AI 的规划工作流模式适配到 Cursor IDE"
+- 仓库类型: 公开（Public）
+
 ## 📝 待验证假设
 
 1. Cursor 基于 VS Code，可能使用类似的配置机制
