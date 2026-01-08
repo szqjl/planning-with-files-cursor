@@ -59,6 +59,7 @@ planning-with-files-cursor/
 - **[notes.md](./notes.md)** - 研究笔记（工作流示例）
 - **[docs/planning/](./docs/planning/)** - 规划文件模板
 - **[TESTING.md](./TESTING.md)** - 测试指南
+- **[FINAL_CHECK_REPORT.md](./FINAL_CHECK_REPORT.md)** - 最终检查报告 ✅
 
 ### 快速开始
 
