@@ -1,6 +1,12 @@
 # Planning with Files for Cursor
 
-> 将 Manus AI 的规划工作流模式适配到 Cursor IDE
+> 将 Manus AI 的规划工作流模式适配到 Cursor IDE | Adapt Manus AI's planning workflow pattern to Cursor IDE
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.1-green.svg)](https://gitee.com/philsz/planning-with-files-cursor)
+[![Status](https://img.shields.io/badge/status-stable-success.svg)](FINAL_CHECK_REPORT.md)
+
+**中文** | [English](README_GITHUB.md)
 
 ## 🎯 项目目标
 
@@ -8,7 +14,11 @@
 
 ## 📋 当前状态
 
-**✅ 项目已完成** - 所有核心功能已开发并通过测试，可以正常使用
+**✅ 项目已完成并优化** - 所有核心功能已开发并通过测试，已优化自动执行规则，可以正常使用
+
+**最新优化** (v1.1):
+- ✅ 添加自动执行规则，减少不必要的用户确认
+- ✅ 解决频繁询问问题，AI 可根据 task_plan.md 自动判断和执行
 
 ## 🔍 需要探索的问题
 
@@ -55,6 +65,7 @@ planning-with-files-cursor/
 本项目已创建完整的工作流文档，参考 [planning-with-files](https://github.com/OthmanAdi/planning-with-files) 的 3-File Pattern 模式：
 
 - **[workflow.md](./workflow.md)** - 完整的工作流使用文档
+- **[USAGE_GUIDE.md](./USAGE_GUIDE.md)** - 在其他电脑上使用指南 ⭐ **新用户必读**
 - **[task_plan.md](./task_plan.md)** - 项目任务计划（工作流示例）
 - **[notes.md](./notes.md)** - 研究笔记（工作流示例）
 - **[docs/planning/](./docs/planning/)** - 规划文件模板
@@ -63,12 +74,44 @@ planning-with-files-cursor/
 
 ### 快速开始
 
-1. 阅读 [workflow.md](./workflow.md) 了解工作流原理
-2. 查看 `task_plan.md` 和 `notes.md` 作为使用示例
-3. 使用 `docs/planning/` 中的模板开始你的项目
-4. 参考 [TESTING.md](./TESTING.md) 测试 `.cursorrules` 效果
+**第一次使用？** 请先阅读 [USAGE_GUIDE.md](./USAGE_GUIDE.md)
 
-## 🚀 快速开始
+1. 阅读 [USAGE_GUIDE.md](./USAGE_GUIDE.md) 了解如何安装
+2. 阅读 [workflow.md](./workflow.md) 了解工作流原理
+3. 查看 `task_plan.md` 和 `notes.md` 作为使用示例
+4. 使用 `docs/planning/` 中的模板开始你的项目
+
+## 🚀 在其他电脑上使用
+
+### 在其他电脑上使用
+
+**详细使用指南**: 请查看 [USAGE_GUIDE.md](./USAGE_GUIDE.md)
+
+#### 快速安装步骤
+
+1. **克隆项目**
+   ```bash
+   git clone https://gitee.com/philsz/planning-with-files-cursor.git
+   ```
+
+2. **安装到你的项目**
+   
+   **Windows:**
+   ```powershell
+   cd your-project
+   ..\planning-with-files-cursor\install\install.ps1 project
+   ```
+   
+   **Linux/macOS:**
+   ```bash
+   cd your-project
+   ../planning-with-files-cursor/install/install.sh project
+   ```
+
+3. **验证安装**
+   ```bash
+   python ../planning-with-files-cursor/install/verify.py
+   ```
 
 ### 安装方式
 
@@ -111,14 +154,8 @@ python install/verify.py
 - ✅ Phase 3: 实现方案设计（选择混合方案）
 - ✅ Phase 4: 核心功能开发
 - ✅ Phase 5: 安装脚本开发
-- ⏳ Phase 6: 文档和测试（进行中）
-
-## 🚀 下一步
-
-1. ⏳ 测试 `.cursorrules` 实际效果
-2. ⏳ 完善使用示例
-3. ⏳ 创建快速开始指南
-4. ⏳ 测试完整工作流
+- ✅ Phase 6: 文档和测试
+- ✅ Phase 7: 工作流优化（v1.1）
 
 ## 📦 Git 仓库
 

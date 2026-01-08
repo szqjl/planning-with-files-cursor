@@ -41,3 +41,10 @@ yarn-error.log*
 test_output/
 *.test
 
+# 测试项目文件（工作流测试时创建的文件）
+*_research_task_plan.md
+*_research_notes.md
+*_task_plan.md
+*_notes.md
+testing_task_plan.md
+testing_notes.md
