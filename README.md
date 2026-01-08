@@ -180,6 +180,7 @@ git push
 ---
 
 **创建时间**: 2026-01-07  
-**项目位置**: D:\CursorPlan\planning-with-files-cursor\
-**Git 仓库**: [https://gitee.com/philsz/planning-with-files-cursor](https://gitee.com/philsz/planning-with-files-cursor) ✅
+**项目位置**: D:\CursorPlan\planning-with-files-cursor\  
+**Gitee 仓库**: [https://gitee.com/philsz/planning-with-files-cursor](https://gitee.com/philsz/planning-with-files-cursor) ✅  
+**GitHub 仓库**: [https://github.com/szqjl/planning-with-files-cursor](https://github.com/szqjl/planning-with-files-cursor) ✅
 
