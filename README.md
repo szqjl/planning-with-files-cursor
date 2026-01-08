@@ -58,12 +58,14 @@ planning-with-files-cursor/
 - **[task_plan.md](./task_plan.md)** - 项目任务计划（工作流示例）
 - **[notes.md](./notes.md)** - 研究笔记（工作流示例）
 - **[docs/planning/](./docs/planning/)** - 规划文件模板
+- **[TESTING.md](./TESTING.md)** - 测试指南
 
 ### 快速开始
 
 1. 阅读 [workflow.md](./workflow.md) 了解工作流原理
 2. 查看 `task_plan.md` 和 `notes.md` 作为使用示例
 3. 使用 `docs/planning/` 中的模板开始你的项目
+4. 参考 [TESTING.md](./TESTING.md) 测试 `.cursorrules` 效果
 
 ## 🚀 快速开始
 
@@ -140,6 +142,6 @@ git push
 ---
 
 **创建时间**: 2026-01-07  
-**项目位置**: D:\CursorPlan\planning-with-files-cursor\  
+**项目位置**: D:\CursorPlan\planning-with-files-cursor\
 **Git 仓库**: [https://gitee.com/philsz/planning-with-files-cursor](https://gitee.com/philsz/planning-with-files-cursor) ✅
 
