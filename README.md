@@ -6,8 +6,6 @@
 [![Version](https://img.shields.io/badge/version-1.1-green.svg)](https://gitee.com/philsz/planning-with-files-cursor)
 [![Status](https://img.shields.io/badge/status-stable-success.svg)](README.md)
 
-**中文** | [English](README_GITHUB.md)
-
 ## 🎯 项目目标
 
 创建一个类似 [planning-with-files](https://github.com/OthmanAdi/planning-with-files) 的项目，但针对 Cursor IDE 进行适配，让用户可以通过简单的复制操作就能在 Cursor 中使用规划工作流。
