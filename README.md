@@ -18,23 +18,22 @@
 - ✅ 添加自动执行规则，减少不必要的用户确认
 - ✅ 解决频繁询问问题，AI 可根据 task_plan.md 自动判断和执行
 
-## 🔍 需要探索的问题
+## ✅ 已解决的问题
 
-1. **Cursor 的配置机制**
-   - Cursor 是否有全局配置目录？
-   - Cursor 是否支持全局 `.cursorrules`？
-   - Cursor 的配置加载优先级是什么？
+1. **Cursor 的配置机制** ✅
+   - ✅ Cursor 全局配置目录：Windows `%USERPROFILE%\.cursor\`
+   - ✅ 支持全局 `.cursorrules`：位于 `%USERPROFILE%\.cursor\rules\`
+   - ✅ 配置加载优先级：项目级 `.cursorrules` 优先于全局配置
 
-2. **实现方案**
-   - 方案 1: 项目模板方式（复制到项目）
-   - 方案 2: 全局配置方式（复制到 Cursor 目录）
-   - 方案 3: VS Code 扩展方式
-   - 方案 4: 混合方案
+2. **实现方案** ✅
+   - ✅ 已实现：项目模板方式（复制到项目）
+   - ✅ 已实现：全局配置方式（复制到 Cursor 目录）
+   - ✅ 选择混合方案：两种方式都支持，用户自由选择
 
-3. **安装方式**
-   - 如何让用户一键安装？
-   - 是否需要安装脚本？
-   - 如何验证安装成功？
+3. **安装方式** ✅
+   - ✅ 已创建一键安装脚本（Windows/Linux/macOS）
+   - ✅ 支持项目级和全局两种安装模式
+   - ✅ 提供验证脚本检查安装结果
 
 ## 📁 项目结构
 
@@ -93,10 +92,16 @@ planning-with-files-cursor/
 
 2. **安装到你的项目**
    
-   **Windows:**
+   **Windows (PowerShell):**
    ```powershell
    cd your-project
    ..\planning-with-files-cursor\install\install.ps1 project
+   ```
+   
+   **Windows (CMD):**
+   ```cmd
+   cd your-project
+   powershell -ExecutionPolicy Bypass -File ..\planning-with-files-cursor\install\install.ps1 project
    ```
    
    **Linux/macOS:**
@@ -114,29 +119,48 @@ planning-with-files-cursor/
 
 #### 方式 1: 项目模板方式（推荐）
 
-**Windows:**
+**Windows (PowerShell):**
 ```powershell
 cd your-project
-.\install\install.ps1 project
+..\planning-with-files-cursor\install\install.ps1 project
+```
+
+**Windows (CMD):**
+```cmd
+cd your-project
+powershell -ExecutionPolicy Bypass -File ..\planning-with-files-cursor\install\install.ps1 project
 ```
 
 **Linux/macOS:**
 ```bash
 cd your-project
-./install/install.sh project
+../planning-with-files-cursor/install/install.sh project
 ```
 
 #### 方式 2: 全局配置方式
 
 **Windows:**
 ```powershell
+# 在 PowerShell 中运行（推荐）
+cd D:\planning-with-files-cursor
 .\install\install.ps1 global
+
+# 或者在命令提示符（CMD）中运行
+powershell -ExecutionPolicy Bypass -File .\install\install.ps1 global
 ```
 
 **Linux/macOS:**
 ```bash
+cd /path/to/planning-with-files-cursor
 ./install/install.sh global
 ```
+
+**安装位置**:
+- Windows: `%USERPROFILE%\.cursor\rules\.cursorrules`
+- Linux: `~/.config/Cursor/rules/.cursorrules`
+- macOS: `~/Library/Application Support/Cursor/rules/.cursorrules`
+
+**注意**: 全局安装后需要重启 Cursor IDE 才能生效。
 
 ### 验证安装
 

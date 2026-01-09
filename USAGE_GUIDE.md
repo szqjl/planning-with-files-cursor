@@ -111,34 +111,62 @@ python planning-with-files-cursor/install/verify.py
 
 **安装步骤**:
 
-1. **运行全局安装脚本**
+1. **进入项目目录**
+   ```bash
+   cd D:\planning-with-files-cursor
+   ```
+
+2. **运行全局安装脚本**
    
-   **Windows:**
+   **Windows (PowerShell - 推荐):**
    ```powershell
-   D:\path\to\planning-with-files-cursor\install\install.ps1 global
+   # 在 PowerShell 中直接运行
+   .\install\install.ps1 global
+   ```
+   
+   **Windows (命令提示符 CMD):**
+   ```cmd
+   powershell -ExecutionPolicy Bypass -File .\install\install.ps1 global
+   ```
+   
+   **Windows (Git Bash):**
+   ```bash
+   # Git Bash 中无法直接运行 PowerShell 脚本
+   # 请使用 PowerShell 或 CMD 运行
    ```
    
    **Linux/macOS:**
    ```bash
-   /path/to/planning-with-files-cursor/install/install.sh global
+   cd /path/to/planning-with-files-cursor
+   ./install/install.sh global
    ```
 
-2. **验证安装**
+3. **重启 Cursor IDE**
+   - 关闭所有 Cursor 窗口
+   - 重新打开 Cursor IDE
+   - 让 Cursor 重新加载全局配置
+
+4. **验证安装**
    ```bash
-   python /path/to/planning-with-files-cursor/install/verify.py
+   python install/verify.py
    ```
 
 **安装结果**:
 - ✅ Cursor 全局配置目录下创建 `.cursorrules` 文件
+  - Windows: `%USERPROFILE%\.cursor\rules\.cursorrules`
+  - Linux: `~/.config/Cursor/rules/.cursorrules`
+  - macOS: `~/Library/Application Support/Cursor/rules/.cursorrules`
 - ✅ 所有项目自动使用规划工作流
 
 **优点**:
 - 一次安装，全局生效
 - 所有项目自动使用
+- 无需在每个项目中单独配置
 
 **注意**:
-- 全局配置可能影响所有项目
-- 如果某个项目需要不同的规则，需要项目级覆盖
+- ⚠️ 全局配置会影响所有项目，请确保这是你想要的行为
+- 如果某个项目需要不同的规则，可以在项目根目录创建 `.cursorrules` 文件（项目级配置会覆盖全局配置）
+- 安装后必须重启 Cursor IDE 才能生效
 
 ---
 
@@ -229,14 +257,49 @@ python install/verify.py
 ### Windows
 
 **安装脚本**: `install.ps1`  
-**运行方式**: PowerShell
+**运行方式**: PowerShell（推荐）或命令提示符（CMD）
+
+#### 方法 1: PowerShell（推荐）
 
 ```powershell
-# 确保 PowerShell 执行策略允许运行脚本
+# 1. 确保 PowerShell 执行策略允许运行脚本
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-# 运行安装脚本
+# 2. 进入项目目录
+cd D:\planning-with-files-cursor
+
+# 3. 运行安装脚本
+# 项目级安装
 .\install\install.ps1 project
+
+# 或全局安装
+.\install\install.ps1 global
+```
+
+#### 方法 2: 命令提示符（CMD）
+
+```cmd
+# 进入项目目录
+cd D:\planning-with-files-cursor
+
+# 运行安装脚本（自动绕过执行策略）
+powershell -ExecutionPolicy Bypass -File .\install\install.ps1 project
+
+# 或全局安装
+powershell -ExecutionPolicy Bypass -File .\install\install.ps1 global
+```
+
+#### 方法 3: 在项目目录中运行（项目级安装）
+
+```powershell
+# 进入你的项目目录
+cd D:\your-project
+
+# 使用相对路径或绝对路径运行脚本
+..\planning-with-files-cursor\install\install.ps1 project
+
+# 或使用绝对路径
+D:\planning-with-files-cursor\install\install.ps1 project
 ```
 
 ### Linux
@@ -302,10 +365,28 @@ your-project/
 无法加载文件，因为在此系统上禁止运行脚本
 ```
 
-**解决方案**:
+**解决方案 1: 修改执行策略（推荐）**
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+
+**解决方案 2: 使用 CMD 运行（绕过执行策略）**
+```cmd
+powershell -ExecutionPolicy Bypass -File .\install\install.ps1 global
+```
+
+**解决方案 3: 临时允许脚本运行**
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install\install.ps1 global
+```
+
+### Q1.1: 在 Git Bash 中无法运行 PowerShell 脚本
+
+**问题**: Git Bash 中运行 `powershell` 命令提示找不到命令
+
+**解决方案**: 
+- 使用 PowerShell 或 CMD 运行安装脚本
+- 或者手动执行安装步骤（参考脚本内容）
 
 ### Q2: 验证脚本找不到 Python
 
@@ -352,13 +433,17 @@ rm -rf docs/planning
 ```
 
 **全局安装**:
-```bash
-# Windows
+```powershell
+# Windows (PowerShell)
 Remove-Item "$env:USERPROFILE\.cursor\rules\.cursorrules"
 
-# Linux/macOS
+# Windows (CMD)
+del "%USERPROFILE%\.cursor\rules\.cursorrules"
+
+# Linux
 rm ~/.config/Cursor/rules/.cursorrules
-# 或
+
+# macOS
 rm ~/Library/Application\ Support/Cursor/rules/.cursorrules
 ```
 
@@ -391,8 +476,6 @@ rm ~/Library/Application\ Support/Cursor/rules/.cursorrules
 - [README.md](./README.md) - 项目说明
 - [workflow.md](./workflow.md) - 工作流详细文档
 - [TESTING.md](./TESTING.md) - 测试指南
-- [FINAL_CHECK_REPORT.md](./FINAL_CHECK_REPORT.md) - 最终检查报告
-- [OPTIMIZATION_SUMMARY.md](./OPTIMIZATION_SUMMARY.md) - 优化总结
 
 ---
 
@@ -400,9 +483,10 @@ rm ~/Library/Application\ Support/Cursor/rules/.cursorrules
 
 如果遇到问题：
 
-1. 查看 [TESTING.md](./TESTING.md) 中的常见问题排查
-2. 检查 [FINAL_CHECK_REPORT.md](./FINAL_CHECK_REPORT.md) 中的测试结果
-3. 查看 Gitee 仓库的 Issues
+1. 查看本文档的"常见问题"部分
+2. 查看 [TESTING.md](./TESTING.md) 中的测试指南
+3. 查看 [workflow.md](./workflow.md) 了解工作流原理
+4. 查看 Gitee 仓库的 Issues: [https://gitee.com/philsz/planning-with-files-cursor/issues](https://gitee.com/philsz/planning-with-files-cursor/issues)
 
 ---
 
