@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.1-green.svg)](https://gitee.com/philsz/planning-with-files-cursor)
-[![Status](https://img.shields.io/badge/status-stable-success.svg)](FINAL_CHECK_REPORT.md)
+[![Status](https://img.shields.io/badge/status-stable-success.svg)](README.md)
 
 **中文** | [English](README_GITHUB.md)
 
@@ -70,7 +70,6 @@ planning-with-files-cursor/
 - **[notes.md](./notes.md)** - 研究笔记（工作流示例）
 - **[docs/planning/](./docs/planning/)** - 规划文件模板
 - **[TESTING.md](./TESTING.md)** - 测试指南
-- **[FINAL_CHECK_REPORT.md](./FINAL_CHECK_REPORT.md)** - 最终检查报告 ✅
 
 ### 快速开始
 

@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.1-green.svg)](https://gitee.com/philsz/planning-with-files-cursor)
-[![Status](https://img.shields.io/badge/status-stable-success.svg)](FINAL_CHECK_REPORT.md)
+[![Status](https://img.shields.io/badge/status-stable-success.svg)](README.md)
 
 **English** | [中文](README.md)
 
