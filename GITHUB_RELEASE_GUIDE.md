@@ -86,9 +86,9 @@ cd planning-with-files-cursor
 ```
 
 ### 📚 文档
-- [使用指南](USAGE_GUIDE.md)
-- [工作流文档](workflow.md)
-- [测试指南](TESTING.md)
+- [使用指南](https://github.com/szqjl/planning-with-files-cursor/blob/master/USAGE_GUIDE.md)
+- [工作流文档](https://github.com/szqjl/planning-with-files-cursor/blob/master/workflow.md)
+- [测试指南](https://github.com/szqjl/planning-with-files-cursor/blob/master/TESTING.md)
 
 ### 🔗 相关链接
 - [Gitee 仓库](https://gitee.com/philsz/planning-with-files-cursor)
@@ -96,7 +96,7 @@ cd planning-with-files-cursor
 
 ---
 
-**完整更新日志**: 查看 [CHANGELOG.md](CHANGELOG.md)
+**完整更新日志**: 查看 [CHANGELOG.md](https://github.com/szqjl/planning-with-files-cursor/blob/master/CHANGELOG.md)
 ```
 
 5. **发布 Release**
